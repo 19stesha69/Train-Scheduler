@@ -5,11 +5,40 @@ body {
 .jumbotron {
     text-align: center;
     font-family: 'Poiret One', cursive;
+    background-image: url("../images/IMG_1461.JPG");
+    background-size: cover;
+    background-position: center center;
+}
+
+.textBackground {
+    background-color: rgba(255,255,255, 0.5);
+}
+
+.textBackground h1,
+.textBackground h2 {
     font-weight: bold;
 }
 
-.jumbotron p {
+.textBackground p {
     font-size: 1.5em;
+    font-weight: bold;
+}
+
+.textBackground p:before, .textBackground p:after {
+    content: " ";
+    position: absolute;
+    width: 75px;
+    height: 10px;
+    border-top: 2px solid #121212;
+    border-bottom: 2px solid #121212;
+}
+
+.textBackground p:before {
+    margin: 15px 0 0 -110px;
+}
+
+.textBackground p:after {
+    margin: 15px 0 0 35px;
 }
 
 .card h4 {

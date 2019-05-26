@@ -52,8 +52,19 @@
     var minutesAway;
     var newFrequency = data.frequency;
 
-    minutesAway = moment().endOf(newDepart, "HHmm").fromNow();
+    minutesAway = moment(newDepart, "hh:mm").fromNow();
     
     console.log(minutesAway);
+
+    var dataArray = [ newTrain, newDest, newFrequency, newDepart, minutesAway];
+    var newRow = $("<tr>");
+
+    for (var i = 0; i < dataArray.length; i++) {
+      var newCell = $("<td>");
+      newCell.text(dataArray[i]);
+      newRow.append(newCell);
+    }
+
+    $("#trainData tbody").append(newRow);
     
   })

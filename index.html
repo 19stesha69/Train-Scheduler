@@ -17,9 +17,11 @@
 
         <div class="container">
             <div class="jumbotron">
-                <h1 class="display-4">Union Station</h1>
-                <p>Los Angeles, California</p>
-                <h2>Amtrak Departures</h2>
+                <div class="textBackground">
+                    <h1 class="display-4">Union Station</h1>
+                    <p>Los Angeles, California</p>
+                    <h2>Amtrak Departures</h2>
+                </div>
             </div>
         </div>
 
@@ -29,7 +31,7 @@
                     <h4>Departures</h4>
                 </div> 
                 <div class="card-body">
-                    <table class="table">
+                    <table class="table" id="trainData">
                         <thead>
                             <tr>
                             <th scope="col">Routes</th>
@@ -40,13 +42,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                            <td>Coast Starlight</td>
-                            <td>Seattle</td>
-                            <td>1440</td>
-                            <td>10:10 AM</td>
-                            <td>too long</td>
-                            </tr>
+                            <!-----tr and td------>
                         </tbody>
                         </table>
                 </div>
@@ -64,11 +60,11 @@
                     <form>
                         <div class="form-group">
                             <label>Train Line</label>
-                            <input type="text" class="form-control" id="train" placeholder="Enter Train Line">
+                            <input type="text" class="form-control" id="train" placeholder="Enter Train Line" required>
                         </div>
                         <div class="form-group">
                             <label>Destination</label>
-                            <input type="text" class="form-control" id="destination" placeholder="Enter Destination">
+                            <input type="text" class="form-control" id="destination" placeholder="Enter Destination" required>
                         </div>
                         <div class="form-group">
                             <label>Departure Time</label>
@@ -76,7 +72,7 @@
                         </div>
                         <div class="form-group">
                             <label>Frequency</label>
-                            <input type="number" class="form-control" id="frequency" placeholder="Enter Frequency (min)">
+                            <input type="number" class="form-control" id="frequency" placeholder="Enter Frequency (min)" required>
                         </div>
 
                         <button type="submit" class="btn btn-primary" id="add-train-btn">Submit</button>
